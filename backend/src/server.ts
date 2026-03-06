@@ -52,6 +52,11 @@ app.get('/', (_req, res) => {
   });
 });
 
+// health check exam requirement
+app.get('/api/health', (_req, res) => {
+  res.json({ ok: true, status: 'Running smoothly on Render!' });
+});
+
 // Task API (Lab 2.1)
 app.use('/api/tasks', taskRoutes);
 
